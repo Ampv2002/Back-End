@@ -1,0 +1,13 @@
+var array1 = [1,2,3,4,5];
+var array2 = [0,5,3,2,3];
+var ArrayUtilsModule = require("./ArrayUtils.js");
+ArrayUtilsModule.isEmpty(array1,array2);
+ArrayUtilsModule.max(array1);
+ArrayUtilsModule.min(array1);
+ArrayUtilsModule.average(array1);
+ArrayUtilsModule.indexOf(array1,1);
+ArrayUtilsModule.subArray(array1,1,3);
+ArrayUtilsModule.isSameLength(array1,array2);
+ArrayUtilsModule.reverse(array1);
+ArrayUtilsModule.contains(array1,5);
+ArrayUtilsModule.concatenate(array1,array2);
