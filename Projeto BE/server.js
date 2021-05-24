@@ -85,11 +85,11 @@ app.post('/cars/:id', function (request, response){
 
 /* e. */
 app.get('/tags', function (request, response){
-  var tag_sql = "SELECT tags FROM cars"
+
+  var tag_sql = "SELECT JSON_VALUE(tags,'$[0].cor') FROM cars "
   con.query(tag_sql, function (err, result, fields) {
     if (err) throw err;
-    var json = JSON.parse(result)
-    response.send(json);
+    response.send(result);
   });
 });
 
